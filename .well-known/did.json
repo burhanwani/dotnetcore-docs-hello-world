@@ -1,0 +1,48 @@
+{
+    "id": "did:web:mycontoso.azurewebsites.net",
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      {
+        "@base": "did:web:mycontoso.azurewebsites.net"
+      }
+    ],
+    "service": [
+      {
+        "id": "#linkeddomains",
+        "type": "LinkedDomains",
+        "serviceEndpoint": {
+          "origins": [
+            "https://mycontoso.azurewebsites.net/"
+          ]
+        }
+      },
+      {
+        "id": "#hub",
+        "type": "IdentityHub",
+        "serviceEndpoint": {
+          "instances": [
+            "https://beta.hub.msidentity.com/v1.0/350c50c1-f0cf-450d-81e3-ecae91f96fbe"
+          ]
+        }
+      }
+    ],
+    "verificationMethod": [
+      {
+        "id": "#e29725d2a74743b5bad1f34e692e460evcSigningKey-b49e7",
+        "controller": "did:web:mycontoso.azurewebsites.net",
+        "type": "EcdsaSecp256k1VerificationKey2019",
+        "publicKeyJwk": {
+          "crv": "secp256k1",
+          "kty": "EC",
+          "x": "GyzUmPNYGZ5TnvPKWFx8KSM5cdMVqerkP8B21Fwtwq4",
+          "y": "lzoHBaHhliHJev1Ocaqy_8-5HZt5PnNa1mGKPGl6VI0"
+        }
+      }
+    ],
+    "authentication": [
+      "#e29725d2a74743b5bad1f34e692e460evcSigningKey-b49e7"
+    ],
+    "assertionMethod": [
+      "#e29725d2a74743b5bad1f34e692e460evcSigningKey-b49e7"
+    ]
+  }
