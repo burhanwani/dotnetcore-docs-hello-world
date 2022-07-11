@@ -1,5 +1,5 @@
 {
-    "id": "did:web:mycontoso.azurewebsites.net",
+    "id":  "did:web:mycontoso.azurewebsites.net",
     "@context": [
       "https://www.w3.org/ns/did/v1",
       {

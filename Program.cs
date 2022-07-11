@@ -21,6 +21,7 @@ app.UseStaticFiles(new StaticFileOptions
            Path.Combine(builder.Environment.ContentRootPath, "well-known")),
     RequestPath = "/.well-known"
 });
+
 app.UseRouting();
 
 app.UseAuthorization();
