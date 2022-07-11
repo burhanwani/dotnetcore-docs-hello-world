@@ -18,7 +18,7 @@ app.UseStaticFiles();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-           Path.Combine(builder.Environment.ContentRootPath, ".well-known")),
+           Path.Combine(builder.Environment.ContentRootPath, "well-known")),
     RequestPath = "/.well-known"
 });
 app.UseRouting();
