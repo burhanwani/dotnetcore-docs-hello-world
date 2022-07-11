@@ -15,7 +15,12 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+           Path.Combine(builder.Environment.ContentRootPath, ".well-known")),
+    RequestPath = "/.well-known"
+});
 app.UseRouting();
 
 app.UseAuthorization();
